@@ -1,5 +1,3 @@
-# Bright_English
-AI-powered English learning web app with reading, listening, vocabulary quizzes, and a virtual pet companion.
 # Bright English
 
 > 一個用 AI 驅動、資料存在本地的英文學習網頁應用。每天自動抓取新聞、生成聽力與閱讀測驗、追蹤單字與錯題，還有一隻會陪你學習的寵物。
