@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bright English Lab</title>
+  <link rel="stylesheet" href="style.css?v=20261020-news-rewrite-v2">
+</head>
+<body>
+  <div class="sky"><i></i><i></i><i></i></div>
+  <header>
+    <button class="brand brandHome" id="brandHome" title="回到 Dashboard">☀️ <b>Bright English</b><span>Dashboard</span></button>
+    <nav aria-label="主選單">
+      <button data-tab="dashboard">Dashboard</button>
+      <button data-tab="reading">閱讀</button>
+      <button data-tab="listening">聽力</button>
+      <button data-tab="words">單字</button>
+      <button data-tab="pet">寵物</button>
+    </nav>
+  </header>
+  <main id="app"></main>
+  <aside id="pet" title="點我和 Foxy 互動">
+    <div id="petFace">🦊</div><span id="petBubble">一起完成今天的小目標吧！</span><b id="hearts"></b>
+  </aside>
+  <div id="chat" hidden><div class="chatHead">🦊 Foxy <button id="closeChat">×</button></div><div id="chatLog"></div><div class="chatInput"><input id="chatText" placeholder="Ask Foxy..."><button id="sendChat">Send</button></div></div>
+  <div id="toast"></div>
+  <script src="app.js?v=20261020-news-rewrite-v2"></script>
+</body>
+</html>

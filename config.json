@@ -1,0 +1,1 @@
+{"providers":{"groq":{"key":"","model":"llama-3.3-70b-versatile"},"openrouter":{"key":"","model":"google/gemini-2.0-flash-001"},"google":{"key":"","model":"gemini-2.0-flash"},"openai":{"key":"","model":"gpt-4o-mini"}},"order":["groq","openrouter","google","openai"]}

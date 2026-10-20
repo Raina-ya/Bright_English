@@ -1,0 +1,14 @@
+.env
+node_modules/
+**/__pycache__/
+*.pyc
+data/cache/
+
+# Local runtime state and generated caches
+work/
+learning_data.json
+question_history.json
+rss_cache.json
+article_pool.json
+news_rewrite_cache.json
+daily_ai_content.json
