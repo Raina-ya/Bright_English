@@ -6,8 +6,8 @@ Bright English 是供以閱讀、聽力與單字練習為主的英語學習者�
 
 - Dashboard 顯示每日任務、金幣、收藏數與錯題數。
 - 閱讀模組透過本機 RSS proxy 取得新聞來源，並可交由已設定的 AI provider 改寫與出題。
-- 聽力模組使用瀏覽器 `SpeechSynthesis` 朗讀材料，提供練習與模考播放模式。
-- 單字模組提供每日單字、發音、收藏分類與收藏複習。
+- 聽力模組使用瀏覽器 `SpeechSynthesis` 朗讀已驗證的材料。
+- 單字模組提供每日單字、發音、收藏與收藏複習。
 - 錯題會儲存於本機；答對紀錄與題目 history 用於複習與避免重複。
 - 可將錯題與已學單字匯出為 Obsidian 可用的 Markdown。
 - Foxy 寵物提供 SVG 互動、情緒數值與 AI 聊天入口；無法使用 AI 時仍保留本機介面。
@@ -116,9 +116,9 @@ Reason → Failed validation is surfaced to the UI instead of silently accepting
 
 Problem → Rebuilding the vocabulary page when switching among today’s words, quiz, favorites, and review can discard the visible state.
 
-Solution → The current `words()` rendering uses independent `.wordSection` regions and `hidden` state, with `switchWordPane` changing visibility.
+Solution → The current `words()` renderer keeps one vocabulary route and changes only its content pane through the `wordPane` state.
 
-Reason → The four views remain part of one vocabulary page rather than becoming separate routes.
+Reason → The four views remain part of one vocabulary page rather than becoming separate routes or pages.
 
 ### Pet rendering
 
@@ -143,7 +143,7 @@ Reason → The app continues to present locally available study data without emb
 - Data is local to the browser and project directory; there is no multi-device sync or account system.
 - Browser voices and available accents depend on the operating system and browser.
 - The mobile Expo project is separate from the web app’s JSON storage and does not automatically sync its progress.
-- The web code contains several legacy UI paths; test the relevant page after changing its associated functions.
+- The web client is intentionally a single vanilla-JavaScript module; larger feature additions should preserve its single render/state flow.
 
 ## License
 
